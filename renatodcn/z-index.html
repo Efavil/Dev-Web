@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobreposição</title>
+    <style>
+        .conteudo1 {
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .conteudo2 {
+            background-color: yellow;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 80px;
+            left: 80px;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteudo1">Conteúdo 1</div>
+    <div class="conteudo2">Conteúdo 2</div>
+</body>
+</html>
