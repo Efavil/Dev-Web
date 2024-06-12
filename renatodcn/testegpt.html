@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto Adaptável com Transição no Width</title>
+    <style>
+        .container {
+            width: 200px;
+            height: 50px;
+            border: 1px solid #000;
+            overflow: hidden;
+            transition: width 5s;
+        }
+
+        .container.expanded {
+            width: 400px;
+        }
+
+        .text {
+            display: inline-block;
+            white-space: nowrap;
+            font-size: 16px; /* Tamanho inicial da fonte */
+            transition: font-size 10s;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text">Este é um exemplo de texto que se adapta ao contêiner.</div>
+    </div>
+    <button class="btn" onclick="toggleContainer()">Toggle Width</button>
+
+    <script>
+        function adjustFontSize() {
+            const container = document.querySelector('.container');
+            const text = document.querySelector('.text');
+            let fontSize = parseInt(window.getComputedStyle(text).fontSize);
+
+            // Reduz o tamanho da fonte até o texto caber no contêiner
+            while (text.scrollWidth > container.clientWidth && fontSize > 0) {
+                fontSize--;
+                text.style.fontSize = fontSize + 'px';
+            }
+
+            // Aumenta o tamanho da fonte até o máximo permitido pelo contêiner
+            while (text.scrollWidth < container.clientWidth && fontSize < 100) {
+                fontSize++;
+                text.style.fontSize = fontSize + 'px';
+            }
+
+            // Certifique-se de que o texto não ultrapasse a largura do contêiner
+            if (text.scrollWidth > container.clientWidth) {
+                fontSize--;
+                text.style.fontSize = fontSize + 'px';
+            }
+        }
+
+        function toggleContainer() {
+            const container = document.querySelector('.container');
+            container.classList.toggle('expanded');
+        }
+
+        // Ajusta o tamanho da fonte após a transição de largura
+        const container = document.querySelector('.container');
+        container.addEventListener('transitionend', adjustFontSize);
+
+        // Ajusta o tamanho da fonte inicialmente
+        adjustFontSize();
+    </script>
+</body>
+</html>

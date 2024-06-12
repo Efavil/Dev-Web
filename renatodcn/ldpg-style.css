@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #004AAD;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    background-image: url(./imgs/banner.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.formulario {
+    color: white;
+    max-width: 300px;
+    background-color: rgb( 0, 0, 0, 0.7);
+    float: right;
+    padding: 40px;
+    margin: 40px;
+}
+
+.formulario h2,
+.formulario p {
+    margin-bottom: 10px;
+}
+
+input, select {
+    display: block;
+    width: 100%;
+    padding: 10px 5px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+}
+
+.cad {
+    background-color: #004AAD;
+    color: white;
+    font-weight: bold;
+}
+
+.cad:hover {
+    background-color: #5899e9;
+    color: black;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+.ddplt {
+    display: inline-block;
+    max-width: 400px;
+    vertical-align: top;
+    padding-left: 30px;
+}
+
+.ddplt h3,
+.ddplt p {
+    text-align: left;
+    margin-bottom: 20px;
+}
