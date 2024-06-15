@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display +Flex</title>
+    <style>
+        * {
+    box-sizing: border-box;
+    }
+
+    .flex-pai {
+        background-color: blue;
+        display: flex;
+        justify-content: space-between;
+        order: 2;
+        
+    }
+
+    .flex-pai div {
+        background-color: white;
+        border: 1px solid black;
+        margin: 5px;
+        padding: 30px;
+        text-align: center;
+        flex: 1 1 500px;
+    }
+
+    .flex-paip {
+        background-color: blue;
+        display: flex;
+        justify-content: space-between;
+        order: 1;
+    }
+
+    .flex-paip div {
+        background-color: white;
+        border: 1px solid black;
+        margin: 5px;
+        padding: 30px;
+        text-align: center;
+        flex: 1 1 500px;
+        order: 2;
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Flexbox</h1>
+
+    <div class="flex-pai">
+        <div class="um">
+            <h1>lorem</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem magnam fugiat consequatur nemo adipisci sequi fuga suscipit minus, porro totam doloribus, ex debitis maxime! Rem rerum dolorem non sit aperiam?</p>
+        </div>
+        <div class="dois">
+            <h1>dadlorem</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem magnam fugiat consequatur nemo adipisci sequi fuga suscipit minus, porro totam doloribus, ex debitis maxime! Rem rerum dolorem non sit aperiam?</p>
+        </div>
+    </div>
+    <div class="flex-paip">
+        <div class="um">
+            <h1>lorem</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem magnam fugiat consequatur nemo adipisci sequi fuga suscipit minus, porro totam doloribus, ex debitis maxime! Rem rerum dolorem non sit aperiam?</p>
+        </div>
+        <div class="dois">
+            <h1>dadlorem</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem magnam fugiat consequatur nemo adipisci sequi fuga suscipit minus, porro totam doloribus, ex debitis maxime! Rem rerum dolorem non sit aperiam?</p>
+        </div>
+    </div>
+</body>
+</html>
